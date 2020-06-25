@@ -11,7 +11,6 @@ resource "aws_subnet" "public_subnet" {
 
 provider "aws" {
     region = "ap-northeast-1"
-    version = "~> 2.67"
 }
 
 output "public_subnet_id" {
@@ -21,7 +20,7 @@ output "public_subnet_id" {
 terraform {
     backend "s3" {
         bucket = "kenji-sample-terraform"
-        key    = "learn?terraform/vpc/terraform.tfstate"
+        key    = "learn_terraform/vpc/terraform.tfstate"
         region = "ap-northeast-1"
     } 
 }
